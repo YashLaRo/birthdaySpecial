@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <meta name="description" content="A little world made with love, just for you.">
+  <title>Happy Birthday, My Love ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="fireworks" aria-hidden="true"></canvas>
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <span class="eyebrow">A LITTLE SURPRISE FOR MY FAVORITE PERSON</span>
+      <h1>Happy Birthday,<br><span class="script">Renu(Beba)</span> <span class="heart">♥</span></h1>
+      <p class="hero-text">
+        Today the world celebrates you, and my heart celebrates
+        the beautiful moment you became part of my life.
+      </p>
+      <a href="#birthday" class="primary-btn">Open your surprise ↓</a>
+      <div class="hero-decor decor-one">♡</div>
+      <div class="hero-decor decor-two">✿</div>
+      <div class="hero-decor decor-three">♥</div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown-section" id="birthday">
+      <span class="eyebrow">THE MOST SPECIAL DAY</span>
+      <h2>Counting down to <span class="script">your day</span></h2>
+      <p class="muted" id="countdownMessage">Every second is worth celebrating.</p>
+      <div class="countdown" aria-label="Birthday countdown">
+        <div class="time-card"><strong id="days">00</strong><span>Days</span></div>
+        <div class="time-card"><strong id="hours">00</strong><span>Hours</span></div>
+        <div class="time-card"><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div class="time-card"><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+    </section>
+
+    <!-- CAKE -->
+    <section class="section cake-section">
+      <span class="eyebrow">MAKE A WISH</span>
+      <h2>A cake made with <span class="script">love</span></h2>
+      <h3 class="muted">Tap the cake to blow out the candles. Make a wish, sweetheart(Bala)!</h3>
+
+      <button class="cake-button" id="cakeBtn" aria-label="Blow out the birthday candles">
+        <div class="cake-scene">
+          <div class="candle-row">
+            <span class="candle"><i class="flame"></i></span>
+            <span class="candle"><i class="flame"></i></span>
+            <span class="candle"><i class="flame"></i></span>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-layer layer-one"></div>
+          <div class="cake-layer layer-two"></div>
+          <div class="cake-plate"></div>
+        </div>
+      </button>
+      <p id="cakeMessage" class="cake-message" aria-live="polite">
+        Three little flames, a million wishes. ✨
+      </p>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section class="section letter-section">
+      <div class="letter-card">
+        <span class="eyebrow">A LETTER FROM MY HEART</span>
+        <h2>To my <span class="script">favorite babes</span> 💌</h2>
+        <p id="typedMessage" class="typed-message" aria-live="polite"></p>
+        <span class="signature">Forever yours, ♥</span>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section class="section memories-section" id="memories">
+      <span class="eyebrow">LITTLE MOMENTS, BIG LOVE</span>
+      <h2>Our little world <span class="script">of memories</span></h2>
+      <p class="muted">Every moment with you deserves its own little frame.</p>
+
+      <div class="gallery">
+        <article class="memory-card">
+          <img src="./images/img1" alt="A couple holding hands" loading="lazy">
+          <div class="memory-caption"><span>01 / US</span><h3>My safe place</h3><p>Anywhere feels like home with you.</p></div>
+        </article>
+        <article class="memory-card">
+          <img src="./images/img2" alt="Romantic pink flowers" loading="lazy">
+          <div class="memory-caption"><span>02 / YOU</span><h3>Your smile</h3><p>My favorite view in the whole world.</p></div>
+        </article>
+        <article class="memory-card">
+          <img src="./images/img3" alt="Warm sunset over a landscape" loading="lazy">
+          <div class="memory-caption"><span>03 / ALWAYS</span><h3>More adventures</h3><p>So many beautiful days still to come.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- GIFT -->
+    <section class="section gift-section">
+      <span class="eyebrow">ONE LAST LITTLE SURPRISE</span>
+      <h2>Something <span class="script">for you</span></h2>
+      <p class="muted">A tiny box, filled with a very big feeling.</p>
+      <button id="giftBtn" class="gift-box" aria-label="Open your surprise gift">
+        <span class="gift-bow">🎀</span>
+        <span class="gift-emoji">🎁</span>
+        <span class="gift-hint">Tap to open</span>
+      </button>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section quiz-section">
+      <span class="eyebrow">A TINY GAME FOR MY LOVE</span>
+      <h2>How well do you know <span class="script">our love?</span></h2>
+      <p class="muted">Three questions. One very cute champion.</p>
+      <div class="quiz-card">
+        <div class="quiz-progress" id="quizProgress">QUESTION 1 OF 3</div>
+        <h3 id="quizQuestion">What is my favorite thing about you?</h3>
+        <div id="quizAnswers" class="quiz-answers"></div>
+        <p id="quizFeedback" aria-live="polite"></p>
+        <button id="nextQuestion" class="primary-btn hidden">Next question →</button>
+        <button id="restartQuiz" class="secondary-btn hidden">Play again ↻</button>
+      </div>
+    </section>
+
+    <!-- ENDING -->
+    <section class="section ending-section">
+      <div class="ending-heart">♥</div>
+      <span class="eyebrow">TODAY, TOMORROW, ALWAYS</span>
+      <h2>You're my favorite <span class="script">everything.</span></h2>
+      <p>No gift could ever compare to the happiness of having you in my life.</p>
+      <button id="fireworksBtn" class="primary-btn">Make the sky sparkle ✨</button>
+      <p class="final-note">Made with all my love, just for you. ♡</p>
+    </section>
+  </main>
+
+  <!-- GIFT MODAL -->
+  <div id="giftModal" class="modal hidden" role="dialog"
+       aria-modal="true" aria-labelledby="giftTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-icon">💌</div>
+      <span class="eyebrow">YOUR LITTLE LOVE NOTE</span>
+      <h2 id="giftTitle">My greatest gift <span class="script">is you.</span></h2>
+      <p>
+        If I could give you one thing in this world, it would be the ability
+        to see yourself through my eyes. Then you would know how precious,
+        wonderful, and deeply loved you truly are.
+      </p>
+      <p>Happy Birthday, my love. Today and every day, I choose you. ❤️</p>
+      <button id="closeModalBtn" class="primary-btn">Sending you a big hug ♡</button>
+    </div>
+  </div>
+
+  <footer>© Made with ♥ and a little bit of magic.</footer>
+</body>
+</html>
